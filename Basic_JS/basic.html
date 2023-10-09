@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+
+  <div id="container">
+    <button id="1">Click Me</button>
+    <button id="2">Click Me</button>
+    <button id="3">Click Me</button>
+</div>
+
+  <script>
+
+
+const container = document.querySelector('#container');
+
+const content = document.createElement('div');
+content.classList.add('content');
+
+
+const blueHeading = document.createElement('h3');
+blueHeading.style.color='blue';
+blueHeading.textContent="I'm a blue h3!";
+
+content.appendChild(blueHeading);
+container.appendChild(content);
+
+
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll('button');
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    alert(button.id);
+  });
+});
+
+  </script>
+</body>
+</html>
