@@ -1,0 +1,32 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+}
+
+#resizeButton {
+    margin-bottom: 10px;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 960px;
+    height: 960px;
+}
+
+.square {
+    background-color: #ccc;
+    transition: background-color 0.3s;
+}
+
